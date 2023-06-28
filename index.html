@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap">
+  <style>
+    :root {
+      /* Colors */
+      --color-primary-bright-orange: hsl(31, 77%, 52%);
+      --color-primary-dark-cyan: hsl(184, 100%, 22%);
+      --color-primary-very-dark-cyan: hsl(179, 100%, 13%);
+      --color-neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+      --color-neutral-very-light-gray: hsl(0, 0%, 95%);
+      
+      /* Typography */
+      --font-body-copy-size: 15px;
+    }
+    
+    /* Layout */
+    body {
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .preview-car {
+      display: grid;
+      max-width: 800px;
+      margin: 0 auto;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    #sedan-container1,
+    #suv-container2,
+    #luxury-container3 {
+      display: grid;
+      text-align: center;
+      padding: 30px;
+      padding-top: 50px;
+    }
+    
+    /* Mobile styles */
+    @media (max-width: 767px) {
+      .preview-car {
+        max-width: 70%;
+        grid-template-columns: 1fr;
+      }
+
+      #sedan-container1,
+      #suv-container2,
+      #luxury-container3 {
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15%;
+      }
+    }
+
+    /* Desktop styles */
+    @media (min-width: 768px) {
+      .preview-car {
+        grid-template-columns: repeat(3, 1fr);
+        height: 500px;
+      }
+
+      #sedan-container1,
+      #suv-container2,
+      #luxury-container3 {
+        text-align: left;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    #sedan-container1 {
+      background-color: hsl(31, 77%, 52%);
+    }
+
+    #suv-container2 {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    #luxury-container3 {
+      background-color: hsl(179, 100%, 13%);
+    }
+
+    /* Typography */
+    body {
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      background-color: hsl(0, 0%, 95%);
+    }
+
+    .preview-car p {
+      color: hsla(0, 0%, 100%, 0.75);
+    }
+    
+    h1, button {
+      color: hsla(0, 0%, 95%, 1);
+    }
+
+    #b1 span {
+      color: hsl(31, 77%, 52%);
+    }
+    #b2 span {
+      color: hsl(184, 100%, 22%);
+    }
+    #b3 span {
+      color: hsl(179, 100%, 13%);
+    }
+
+    button {
+      background-color: white;
+      color: hsl(0, 0%, 95%);
+      border: 2px solid transparent;
+      border-radius: 25px;
+      padding: 10px 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    #sedan-container1 button,
+    #suv-container2 button,
+    #luxury-container3 button {
+      margin-top: auto;
+      margin-bottom: 10px;
+      width: 8rem;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: hsl(0, 0%, 90%);
+    }
+
+    .attribution {
+      margin-top: auto;
+      text-align: center;
+      padding: 20px;
+      background-color: hsl(0, 0%, 100%);
+      font-size: 12px;
+      color: hsl(0, 0%, 50%);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="preview-car">
+    <div id="sedan-container1">
+      <img src="images\icon-sedans.svg" alt="sedans">
+      <h1>Sedans</h1>
+      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city or on your next road trip.</p>
+      <button id="b1"><span>Learn More</span></button>
+    </div>
+
+    <div id="suv-container2">
+      <img src="images\icon-suvs.svg" alt="suvs">
+      <h1>SUVs</h1>
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation and off-road adventures.</p>
+      <button id="b2"><span>Learn More</span></button>
+    </div>
+
+    <div id="luxury-container3">
+      <img src="images\icon-luxury.svg" alt="luxury">
+      <h1>Luxury</h1>
+      <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury rental and arrive in style.</p>
+      <button id="b3"><span>Learn More</span></button>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Son</a>.
+  </div>
+</body>
+</html>
